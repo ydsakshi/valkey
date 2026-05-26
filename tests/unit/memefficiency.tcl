@@ -581,7 +581,7 @@ run_solo {defrag} {
 
 
     set standalone_tags [list defrag external:skip standalone]
-    set cluster_tags [list defragmemefficiency external:skip cluster]
+    set cluster_tags [list defrag external:skip cluster]
     set aof_overrides [list appendonly yes auto-aof-rewrite-percentage 0 save "" lazyfree-lazy-user-del no]
     set std_overrides [list appendonly no save "" lazyfree-lazy-user-del no]
 
