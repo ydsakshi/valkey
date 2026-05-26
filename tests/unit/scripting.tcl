@@ -1289,10 +1289,10 @@ start_server {tags {"scripting"}} {
 start_server {tags {"scripting external:skip large-memory"}} {
     test {EVAL - JSON string encoding a string larger than 2GB} {
         run_script {
-            local s = string.rep("a", 1024 * 1024 * 1024)
+            local s = string.rep("a", 750 * 1024 * 1024)
             return #cjson.encode(s..s..s)
         } 0
-    } {3221225474} ;# length includes two double quotes at both ends
+    } {2359296002} ;# length includes two double quotes at both ends
 }
 
 start_server {tags {"scripting external:skip large-memory"}} {
